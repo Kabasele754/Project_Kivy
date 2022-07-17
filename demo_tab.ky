@@ -1,0 +1,35 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "Article"
+            right_action_items: [["dots-vertical", lambda x: app.callback(x)]]
+
+        MDTabs:
+            id: android_tabs
+            on_tab_switch: app.on_tab_switch(*args)
+
+
+    BoxLayout:
+        orientation: 'vertical'
+        #FitImage:
+            #source: "guitar1.png"
+            #radius: [20,]
+
+
+        MDBottomAppBar:
+            MDToolbar:
+                title: 'Achille'
+                icon: 'language-python'
+                type: 'bottom'
+                left_action_items: [["coffee", lambda x: app.navigation_draw()]]
+                on_action_button: root.navigation_draw()
+<Tab>:
+    MDLabel:
+        id: label
+        text: "Tab 0"
+        halign: "center"
+    FitImage:
+        source: "guitar1.png"
+        radius: [20,]
