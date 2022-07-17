@@ -21,9 +21,9 @@ Maintenant que python est installé, ouvrez la ligne de commande et assurez-vous
 
 2. Installez les dépendances (ignorez gstreamer (~120 Mo) si vous n'en avez pas besoin, consultez les dépendances de Kivy ) :
 
-```python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+```python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew```
 
-python -m pip install kivy.deps.gstreamer```
+```python -m pip install kivy.deps.gstreamer```
 
 ### Noter
 
