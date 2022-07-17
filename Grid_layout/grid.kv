@@ -2,16 +2,24 @@ ExempleGrid:
 
 <ExempleGrid>:
     cols: 3
+    background_color: (1, 1, 1, 1)
+    canvas.before:
+        #color: self.background_color
+
 
     Button:
-
         text: " A "
+        background_normal: ""
+        background_color: (1,0,.45,1)
+
     Image:
         source: "Virginia-Tulip-leaves.jpg"
         radius: [20,]
    
     Button:
         text: " C "
+        background_normal: ""
+        background_color: (0,5,.45,1)
 
     Image:
         source: "tree.jpg"
@@ -19,6 +27,8 @@ ExempleGrid:
          
     Button:
         text: " B "
+        background_normal: ""
+        background_color: (0,.56,.5,1)
     
     Image:
         source: "heaven.jpg"
