@@ -4,7 +4,12 @@ ExempleGrid:
     cols: 3
     background_color: (1, 1, 1, 1)
     canvas.before:
-        #color: self.background_color
+        #Color: self.background_color
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
 
 
     Button:
