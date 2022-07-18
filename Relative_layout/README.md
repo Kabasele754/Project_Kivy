@@ -31,7 +31,7 @@ We can define upto 8 keys i.e. it takes arguments in form of dictionary.
 
 ```pos_hint = {“x”:1, “y”:1, “left”:1, “right”:1, "center_x":1, "center_y":1,“top”:1, “bottom”:1("top":0)}```
 
-## Remarque :
+#### En une Remarque :
 
 Floatlayout et les RelativeLayout deux prennent en charge le positionnement absolu et relatif selon que pos_hint ou pos est utilisé. Mais si vous voulez un positionnement absolu, utilisez le FloatLayout.
 
