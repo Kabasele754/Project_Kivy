@@ -23,10 +23,13 @@ Lorsque le widget avec position=(0, 0) est ajouté à RelativeLayout, maintenant
 Cette disposition vous permet de définir des coordonnées relatives pour les enfants. Si vous voulez un positionnement absolu, utilisez le FloatLayout. Dans RelativeLayout, la taille et la position de chaque widget enfant doivent être données. Cela fait également le placement dynamique.
 
 
-```We can do relative positioning by:
+``` We can do relative positioning by:
 pos_hint: provide hint of position
 
 We can define upto 8 keys i.e. it takes arguments in form of dictionary.
 
-pos_hint = {“x”:1, “y”:1, “left”:1, “right”:1, "center_x":1, "center_y":1,
-           “top”:1, “bottom”:1("top":0)} ```
+pos_hint = {“x”:1, “y”:1, “left”:1, “right”:1, "center_x":1, "center_y":1,“top”:1, “bottom”:1("top":0)}```
+
+## Remarque :
+
+Floatlayout et les RelativeLayout deux prennent en charge le positionnement absolu et relatif selon que pos_hint ou pos est utilisé. Mais si vous voulez un positionnement absolu, utilisez le FloatLayout.
