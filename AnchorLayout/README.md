@@ -4,6 +4,7 @@
 AnchorLayout aligne ses enfants sur une bordure (haut, bas, gauche, droite) ou un centre. La classe donnée ci-dessous est utilisée pour implémenter la disposition des ancres.
 
 ``` kivy.uix.anchorlayout.AnchorLayout```
+
 AnchorLayout peut être initialisé avec des paramètres :
 
 anchor_x 
