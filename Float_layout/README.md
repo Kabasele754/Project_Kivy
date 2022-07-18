@@ -33,7 +33,7 @@ Le système de coordonnées en kivy fonctionne en bas à gauche ! Cela sera impo
 
 Code pour implémenter le positionnement dynamique :
 
-``` # To change the kivy default settings 
+```# To change the kivy default settings 
 # we use this module config 
 from kivy.config import Config 
     
@@ -66,4 +66,5 @@ class MyApp(App):
   
 # run the App
 if __name__ == "__main__":
-    MyApp().run() ```
+    MyApp().run()
+```
