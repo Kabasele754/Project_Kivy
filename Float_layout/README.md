@@ -7,3 +7,27 @@ Remarque : FloatLayout respecte les propriétés pos_hint et size_hint de ses en
 La première chose que nous devons faire pour utiliser un FloatLayout est de l'importer.
 
 ```from kivy.uix.floatlayout import FloatLayout```
+
+
+
+### Remarque : Maintenant, si vous modifiez la taille de la fenêtre, sa position et sa taille changent également. Cette mise en page peut être utilisée pour une application. La plupart du temps, vous utiliserez la taille de la fenêtre.
+
+Placements dynamiques 
+Maintenant, il manque quelque chose ou le code ci-dessus n'est pas parfait, vous pouvez le dire. Nous devons encore ajouter le placement des boutons.
+
+### Nous avons 2 propriétés pour créer un placement dynamique :
+
+1) pos_hint: fournit un indice de position
+Nous pouvons définir jusqu'à 6 clés, c'est-à-dire qu'il prend des arguments sous forme de dictionnaire.
+pos_hint = {"x":1, "y":1, "gauche":1, "droite":1, "haut":1, "bas":1}
+
+2) size_hint : fournit un indice de taille
+Contient deux arguments, à savoir la largeur et la hauteur
+
+### Noter:
+
+Vous ne pouvez utiliser que des valeurs comprises entre 0 et 1 pour size_hint et pos_hint. Où 0 = 0 % et 1 = 100 %.
+
+Le système de coordonnées en kivy fonctionne en bas à gauche ! Cela sera important lors du placement de nos objets. (c'est-à-dire (0, 0) est le coin inférieur gauche).
+
+Code pour implémenter le positionnement dynamique :
