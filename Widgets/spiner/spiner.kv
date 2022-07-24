@@ -20,11 +20,11 @@ FloatLayoutExampleSecond:
         background_color: (0.784, 0.443, 0.216, 1)
         size_hint:  (0.3, 0.2)
         pos_hint: {'x': .1, 'y':.75}
-        on_text: root.on_spinner_select()
+        on_text: root.on_spinner_select(self,self.text)
         
     
             # It changes the label info as well
             # add a label displaying the selection from the spinner
     Label:
-        text: "Selected value in spinner is: " 
+        text: root.spinnerSelection
         pos_hint: {'x': .2, 'y':.4}
