@@ -35,6 +35,7 @@ from kivy.uix.spinner import Spinner
 # to work with FloatLayout first 
 # you have to import it 
 from kivy.uix.floatlayout import FloatLayout
+from kivy.lang.builder import Builder
   
   
 # Make an App by deriving from the App class
@@ -43,23 +44,8 @@ class SpinnerExample(App):
     # define build 
     def build(self):
   
-        # creating floatlayout
-        layout = FloatLayout()
-  
-        # creating the spinner
-        # configure spinner object and add to layout
-        self.spinnerObject = Spinner(text ="Python",
-             values =("Python", "Java", "C++", "C", "C#", "PHP"),
-             background_color =(0.784, 0.443, 0.216, 1)) 
-  
-        self.spinnerObject.size_hint = (0.3, 0.2)
-  
-        self.spinnerObject.pos_hint ={'x': .35, 'y':.75}
-  
-        layout.add_widget(self.spinnerObject)
-  
-        # return the layout
-        return layout;
+        
+        return Builder.load_file("spiner.kv")
   
   
 # Run the app
