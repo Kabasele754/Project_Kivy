@@ -36,7 +36,12 @@ from kivy.uix.spinner import Spinner
 # you have to import it 
 from kivy.uix.floatlayout import FloatLayout
 from kivy.lang.builder import Builder
-  
+ 
+ 
+class FloatLayoutExample(FloatLayout):
+     pass 
+class FloatLayoutExampleSecond(FloatLayout):
+    pass
   
 # Make an App by deriving from the App class
 class SpinnerExample(App):
