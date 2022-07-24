@@ -45,7 +45,7 @@ class FloatLayoutExampleSecond(FloatLayout):
     spinnerSelection = StringProperty("Value")
     
     def on_spinner_select(self, spinner, text):
-        self.spinnerSelection.text = f"Selected value in spinner is: {text}"
+        self.spinnerSelection = f"Selected value in spinner is: {text}"
   
         print('The spinner', spinner, 'have text', text)
   
