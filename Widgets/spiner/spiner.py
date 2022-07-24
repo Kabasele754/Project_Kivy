@@ -30,6 +30,7 @@ from kivy.uix.label import Label
 # quick way to select one value from a set.
 # like a dropdown list
 from kivy.uix.spinner import Spinner
+from kivy.properties import StringProperty
   
 # module consist the floatlayout 
 # to work with FloatLayout first 
@@ -41,7 +42,12 @@ from kivy.lang.builder import Builder
 class FloatLayoutExample(FloatLayout):
      pass 
 class FloatLayoutExampleSecond(FloatLayout):
-    pass
+    spinnerSelection = StringProperty("Value")
+    
+    def on_spinner_select(self, spinner, text):
+        self.spinnerSelection.text = f"Selected value in spinner is: {text}"
+  
+        print('The spinner', spinner, 'have text', text)
   
 # Make an App by deriving from the App class
 class SpinnerExample(App):
