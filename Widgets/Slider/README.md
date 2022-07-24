@@ -1,0 +1,4 @@
+# Slider:
+
+Le widget Slider ressemble à celui que nous utilisons dans Android pour augmenter la luminosité, le volume, etc. Il prend en charge les orientations horizontales et verticales, les valeurs min/max et une valeur par défaut. Kivy prend en charge plusieurs options de widget de curseur pour personnaliser le curseur, l'image du curseur, la bordure, l'arrière-plan à utiliser dans différentes orientations, la région entre la valeur minimale et la valeur maximale. 
+Kivy prend également en charge le traitement en terme de valeur normalisée (plage de 0 à 1) plutôt que les plages réelles prises en charge par le curseur.
