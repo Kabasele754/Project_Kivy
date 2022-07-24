@@ -13,16 +13,18 @@ FloatLayoutExampleSecond:
         pos_hint: {'x': .35, 'y':.75}
 
 <FloatLayoutExampleSecond>:
-
+    
     Spinner: 
         text: "Python"
         values: ("Python", "Java", "C++", "C", "C#", "PHP")
         background_color: (0.784, 0.443, 0.216, 1)
         size_hint:  (0.3, 0.2)
-        pos_hint: {'x': .35, 'y':.75}
+        pos_hint: {'x': .1, 'y':.75}
         on_text: root.on_spinner_select
+        
     
             # It changes the label info as well
             # add a label displaying the selection from the spinner
     Label:
         text: "Selected value in spinner is: " 
+        pos_hint: {'x': .50, 'y':.75}
