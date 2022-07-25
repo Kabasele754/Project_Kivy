@@ -1,6 +1,5 @@
 import os
 os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
-# Program to explain how to add carousel in kivy
 
 # import kivy module
 import kivy
@@ -22,22 +21,20 @@ from kivy.uix.image import AsyncImage
 # classic mobile-friendly carousel
 # view where you can swipe between slides
 from kivy.uix.carousel import Carousel
+from kivy.lang.builder import Builder
+
+Builder.load_file('Carousel_widget.kv')
+
+
+class CarouselExample(Carousel):
+    pass
 
 
 # Create the App class
 class CarouselApp(App):
     def build(self):
-        # Add carousel
-        # And add the direction of swipe
-        carousel = Carousel(direction='right')
-
-        # Adding 10 slides
-        for i in range(10):
-            src = "http://placehold.it/480x270.png&text=slide-%d&.png"% i
-            # using Asynchronous image
-            image = AsyncImage(source=src, allow_stretch=True)
-            carousel.add_widget(image)
-        return carousel
+       
+        return CarouselExample()
 
 
 # Run the App

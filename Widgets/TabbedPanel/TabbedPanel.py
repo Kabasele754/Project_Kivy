@@ -14,13 +14,13 @@ from kivy.lang import Builder
 Builder.load_file("Tabbed_panel.kv")
 
 
-class Test(TabbedPanel):
+class TestTabbledPanel(TabbedPanel):
     pass
 
 
 class TabbedPanelApp(App):
     def build(self):
-        return Test()
+        return TestTabbledPanel()
 
 
 if __name__ == '__main__':
