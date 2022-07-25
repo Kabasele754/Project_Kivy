@@ -1,0 +1,1 @@
+# Widget de la barre de progression :
