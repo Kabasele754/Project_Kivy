@@ -1,3 +1,6 @@
+import os
+
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 # Program to Show how to create a Progressbar in .kv file
   
 # import kivy module    
