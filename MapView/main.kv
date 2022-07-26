@@ -1,3 +1,17 @@
-#: import MapView kivy.garden.mapview.MapView
+#:import MapView kivy.garden.mapview.MapView
 
-MapView
+MapView:
+    lat:-11.669955013749126
+    lon:27.47715049663705
+    zoom:5
+    on_lat:
+        print('Lat', self.lat)
+    on_lon:
+        print('Lon', self.lon)
+    MapMarkerPopup:
+        source:"marker.png"
+        lat:11
+        lon:11
+        Button:
+            on_release:
+                print("Hey")
