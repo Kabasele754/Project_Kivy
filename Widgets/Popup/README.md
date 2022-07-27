@@ -6,3 +6,5 @@ Les boîtes de dialogue contextuelles sont utilisées lorsque nous devons transm
 
 Gardez une chose à l'esprit que la taille par défaut d'un widget est size_hint=(1, 1).
 Si vous ne voulez pas que votre popup soit en plein écran, vous devez donner des conseils de taille avec des valeurs inférieures à 1 (par exemple size_hint=(.8, .8)) ou désactiver le size_hint et utiliser des attributs de taille fixe.
+
+Remarque : Popup est un widget spécial. N'essayez pas de l'ajouter en tant qu'enfant à un autre widget. Si vous le faites, Popup sera géré comme un widget ordinaire et ne sera pas créé caché en arrière-plan.
