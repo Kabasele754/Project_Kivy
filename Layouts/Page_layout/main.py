@@ -20,6 +20,10 @@ from kivy.uix.pagelayout import PageLayout
 # creates the button in kivy 
 # if not imported shows the error 
 from kivy.uix.button import Button
+
+# import builder for load file .kv
+from kivy.lang import Builder
+Builder.load_file('page2.kv')
    
 class PageLayout(PageLayout):
     """
