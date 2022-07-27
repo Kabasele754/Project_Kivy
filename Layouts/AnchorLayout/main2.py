@@ -27,6 +27,9 @@ from kivy.config import Config
 # you can use 0 or 1 && True or False
 Config.set('graphics', 'resizable', True)
 
+# import builder for load file .kv
+from kivy.lang import Builder
+Builder.load_file('anchor2.kv')
 
 # creating the root widget used in .kv file
 class Anchor_Layout(GridLayout):
