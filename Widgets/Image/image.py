@@ -2,6 +2,9 @@
 ## working with images in Kivy using .kv file 
    
 ##################################################
+import os
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
+
 # import kivy module   
 import kivy 
      
@@ -24,6 +27,10 @@ from kivy.config import Config
 # 0 being off 1 being on as in true / false
 # you can use 0 or 1 && True or False
 Config.set('graphics', 'resizable', True)
+
+# import builder for load file .kv
+from kivy.lang import Builder
+Builder.load_file('image.kv')
  
 # creating the root widget used in .kv file
 class Imagekv(BoxLayout):
