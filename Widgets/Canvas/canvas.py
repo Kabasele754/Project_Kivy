@@ -1,3 +1,4 @@
+import os
 os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 from kivy.app import App
 # import kivy module
