@@ -1,3 +1,5 @@
+import os
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 # Kivy example for the Popup widget
   
 # Program to Show how to create a switch
