@@ -10,3 +10,5 @@ Les images peuvent être chargées dans l'application via deux types :
 1. Chargement synchrone : chargement de l'image à partir du système (doit provenir du dossier dans lequel les fichiers .py et .kv sont enregistrés) 
 
 2. Chargement asynchrone : pour charger une image de manière asynchrone (par exemple à partir d'un serveur Web externe) 
+
+Remarque : Par défaut, l'image est centrée et tient à l'intérieur du cadre de délimitation du widget. Si vous ne le souhaitez pas, vous pouvez définir allow_stretch sur True et keep_ratio sur False. 
