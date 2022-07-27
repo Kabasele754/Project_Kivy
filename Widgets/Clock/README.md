@@ -4,7 +4,8 @@ L'objet Horloge vous permet de programmer un appel de fonction dans le futur ; u
 
 Vous pouvez obtenir le temps écoulé entre la planification et l'appel du rappel via l'argument dt :
 
-```# define callback
+```
+# define callback
 def my_callback(dt):
     pass
  
@@ -15,4 +16,5 @@ Clock.schedule_interval(my_callback, 0.5)
 Clock.schedule_once(my_callback, 5)
  
 # call my_callback as soon as possible.
-Clock.schedule_once(my_callback)```
+Clock.schedule_once(my_callback)
+```
