@@ -1,4 +1,8 @@
 # Program to explain how to add carousel in kivy
+import imp
+import os
+
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 
 # import kivy module
 import kivy
@@ -23,6 +27,9 @@ from kivy.uix.carousel import Carousel
 # divides it into columns and rows,
 # then adds widgets to the resulting “cells”.
 from kivy.uix.gridlayout import GridLayout
+from kivy.lang import Builder
+
+Builder.load_file('carousel1.kv')
 
 
 # Create the Layout Class
