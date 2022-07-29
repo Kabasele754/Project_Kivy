@@ -27,3 +27,10 @@ En cela, nous allons créer le kivy le chronomètre et nous créons 3 boutons da
 
 Il est bon d'utiliser le module intégré kivy tout en travaillant avec l'horloge et : 
 à partir de kivy.clock import Clock
+
+
+Un projet sur Kivy. Les utilisateurs de l'application doivent pouvoir sélectionner la date (jour.mois.année comme 06.03.2015) à partir de widgets conviviaux comme DatePickerCtrl et CalendarCtr l de wxPython.
+
+Il y a CalendarWidget (comme CalendarCtrl de wxPython) et DatePicker (comme DateOickerCtrl de wxPython) et les ai placés dans un module python externe nommé KivyCalendar.
+
+pip install KivyCalendar
