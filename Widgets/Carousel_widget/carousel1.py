@@ -1,5 +1,4 @@
 # Program to explain how to add carousel in kivy
-import imp
 import os
 
 os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
