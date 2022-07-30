@@ -170,11 +170,11 @@ class Main(MDApp):
         a.focus=True
     def search(self,a,b):
         a.data=[]
-        for x in self.all_pdfs():
+        for x in books.splitlines():
             if b in str(x):
                 a.data.append(
                 {
-                    "viewclass": "JBSIDIS",
+                    "viewclass": "H",
                     "markup": True,
                     "text": "[b][size=33]jbsidis: [/b][/size]"+str(x)
                 }
