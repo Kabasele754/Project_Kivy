@@ -1,5 +1,8 @@
 ## Sample Python application demonstrating the
 ## working of RelativeLayout in Kivy using .kv file
+import os
+
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 
 ###################################################
 # import modules
@@ -28,7 +31,7 @@ class RelativeLayout(RelativeLayout):
 
 # creating the App class in which name
 #.kv file is to be named Relative_Layout.kv
-class Relative_LayoutApp(App):
+class MainApp(App):
 	# defining build()
 	def build(self):
 		# returning the instance of root class
@@ -36,4 +39,4 @@ class Relative_LayoutApp(App):
 
 # run the app
 if __name__ == "__main__":
-	Relative_LayoutApp().run()
+	MainApp().run()
