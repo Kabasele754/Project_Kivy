@@ -16,8 +16,9 @@ from kivy.app import App
 # creates the button in kivy
 # if not imported shows the error
 from kivy.uix.button import Button
-from kivy.properties import *
+from kivy.properties import ObjectProperty, NumericProperty
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.label import Label
 from kivy.uix.image import Image
 from kivy.uix.screenmanager import Screen
 
