@@ -16,6 +16,11 @@ from kivy.app import App
 # creates the button in kivy
 # if not imported shows the error
 from kivy.uix.button import Button
+from kivy.properties import *
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.image import Image
+from kivy.uix.screenmanager import Screen
+
 
 
 class HomeScreen(Screen):
@@ -29,9 +34,9 @@ class HomeScreen(Screen):
 
         for i in range(3):
                 layout = GridLayout(cols=1)
-                print layout
+                print (layout)
                 img = Image(source='kivy.png')
-                print img
+                print (img)
                 lbl = Label(text='label')
                 layout.add_widget(img)
                 layout.add_widget(lbl)
