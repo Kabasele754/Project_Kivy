@@ -17,6 +17,31 @@ from kivy.app import App
 # if not imported shows the error
 from kivy.uix.button import Button
 
+
+class HomeScreen(Screen):
+    grid_l = ObjectProperty(None)
+    top_lbl = ObjectProperty(None)
+
+    def search_btn_pressed(self):
+        grid = self.grid_l
+        grid.bind(minimum_height=grid.setter('height'),
+                     minimum_width=grid.setter('width'))
+
+        for i in range(3):
+                layout = GridLayout(cols=1)
+                print layout
+                img = Image(source='kivy.png')
+                print img
+                lbl = Label(text='label')
+                layout.add_widget(img)
+                layout.add_widget(lbl)
+
+                btn1 = Button(size_hint=(1, None))
+                btn1.text = '%r' % i
+                btn1.add_widget(layout)
+
+                grid.add_widget(btn1)
+
 # class in which we are creating the button
 class ButtonApp(App):
 	
