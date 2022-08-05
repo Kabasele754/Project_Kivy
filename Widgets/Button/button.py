@@ -53,8 +53,7 @@ class ButtonApp(App):
 	
 	def build(self):
 		
-		btn = Button(text ="Push Me !")
-		return btn
+		return HomeScreen()
 
 # creating the object root for ButtonApp() class
 root = ButtonApp()
