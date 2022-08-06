@@ -7,13 +7,13 @@ from .models import *
 
 # Create your views here.
 @api_view(['GET'])
-def all_tasks(request):
+def all_friend(request):
     friend = Friend.objects.all()
     serializer = ChatSerializer(friend, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['POST'])
-def create_task(request):
+def create_friend(request):
     data = request.data
     serializer =ChatSerializer(data=data)
     if serializer.is_valid():
