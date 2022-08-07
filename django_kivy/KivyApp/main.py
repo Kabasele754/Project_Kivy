@@ -5,6 +5,7 @@ os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 import requests
 from kivy.clock import Clock
 from kivy.uix.recycleview import RecycleView
+from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 
 from kivymd.app import MDApp
@@ -23,6 +24,8 @@ class MyRecycleView(RecycleView):
             list_data.append({'text': item['name']})
 
         self.data = list_data
+class HomeScreen(Screen):
+    pass
 class Test(MDApp):
 
     def build(self):

@@ -10,7 +10,7 @@ MDScreen:
             icon: 'home'
             badge_icon: "numeric-10"
 
-            MyRecycleView:
+            HomeScreen:
 
         MDBottomNavigationItem:
             name: 'screen 2'
@@ -18,9 +18,20 @@ MDScreen:
             icon: 'discord'
             badge_icon: "numeric-5"
 
-            MDLabel:
-                text: 'Discord'
-                halign: 'center'
+            BoxLayout:
+                cols:2
+                padding: "30dp"
+                MDTextField:
+                    hint_text: "Enter name"
+                    mode: "rectangle"
+                    size_hint: 1, None
+                    #width: "80dp"
+                    height: "50dp"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                MDRoundFlatIconButton:
+
+                    text: "Enregistrer"
+                    #pos_hint: {"center_x": .5, "center_y": .5}
 
         MDBottomNavigationItem:
             name: 'screen 3'
@@ -31,15 +42,21 @@ MDScreen:
                 text: 'LinkedIN'
                 halign: 'center'
 
+<HomeScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        MyRecycleView:
+
+
 
 <MyRecycleView>:
-    viewclass: 'Label'
+    viewclass: 'MDLabel'
     RecycleBoxLayout:
         color: 1,1,1,1
         default_size: None, dp(56)
         default_size_hint: 1, None
         size_hint_y: None
         height: self.minimum_height
+        hlign: "center"
         orientation: 'vertical'
-        Label:
-            text: "Hello"
+
