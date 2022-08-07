@@ -1,5 +1,4 @@
 MDScreen:
-
     MDBottomNavigation:
         #panel_color: "#eeeaea"
         #selected_color_background: "#97ecf8"
@@ -11,9 +10,7 @@ MDScreen:
             icon: 'home'
             badge_icon: "numeric-10"
 
-            MDLabel:
-                text: 'Mail'
-                halign: 'center'
+            MyRecycleView:
 
         MDBottomNavigationItem:
             name: 'screen 2'
@@ -33,3 +30,16 @@ MDScreen:
             MDLabel:
                 text: 'LinkedIN'
                 halign: 'center'
+
+
+<MyRecycleView>:
+    viewclass: 'Label'
+    RecycleBoxLayout:
+        color: 1,1,1,1
+        default_size: None, dp(56)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        Label:
+            text: "Hello"
