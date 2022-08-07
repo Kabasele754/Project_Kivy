@@ -18,9 +18,9 @@ class Profile(models.Model):
 class Friend(models.Model):
     #profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     name= models.CharField(max_length=100)
-    
+
     def __str__(self):
-        return self.profile.name
+        return self.name
 
 class ChatMessage(models.Model):
     body = models.TextField()
