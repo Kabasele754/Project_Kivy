@@ -20,7 +20,7 @@ class Friend(models.Model):
     name= models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return "Je m'appelle ",self.name
 
 class ChatMessage(models.Model):
     body = models.TextField()
