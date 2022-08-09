@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from .serializer import *
 from .models import *
 
-# Create your views here.
+
 @api_view(['GET'])
 def all_friend(request):
     friend = Friend.objects.all()
