@@ -1,14 +1,14 @@
 
 MDBoxLayout:
     orientation: "vertical"
-    padding: dp(20)
+    padding: dp(30), dp(20), dp(30),dp(20)
 
 
     MDFloatLayout:
         MDLabel:
             pos_hint: {"center_x": .5, "center_y": .95}
             text: "Formulaire d'inscription"
-            font_size: 30
+            font_size: 28
             mode: "rectangle"
             icon_left: "magnify"
             normal_color: (100, 100, 50, .5)
@@ -16,7 +16,6 @@ MDBoxLayout:
 
         MDTextField:
             pos_hint: {"center_x": .5, "center_y": .80}
-            hint_text: "Recherche"
             hint_text: "Nom"
             mode: "rectangle"
             icon_left: "magnify"
@@ -32,7 +31,6 @@ MDBoxLayout:
             color_active: (255, 255, 255, 0)
         MDTextField:
             pos_hint: {"center_x": .5, "center_y": .50}
-            hint_text: "Recherche"
             icon_left: "magnify"
             hint_text: "Prénom"
             mode: "rectangle"
@@ -40,7 +38,6 @@ MDBoxLayout:
             color_active: (255, 255, 255, 0)
         MDTextField:
             pos_hint: {"center_x": .5, "center_y": .35}
-            hint_text: "Recherche"
             icon_left: "magnify"
             hint_text: "Phone"
             mode: "rectangle"
