@@ -13,7 +13,6 @@ items = [
     {"color":(.5,.5,.5,1), "font_size": "70sp", "text": "gray",      "input_data": [8766,13,6]},
     {"color":(1,.5,.5, 1), "font_size": "60sp", "text": "orange",    "input_data": [9,4,6]},
     {"color":(1, 1,.5, 1), "font_size": "50sp", "text": "yellow",    "input_data": [852,958,123]},
-    {"color":(1, 0,0, 1), "font_size": "50sp", "text": "Red",    "input_data": [852,958,123]}
     
 ]
 
