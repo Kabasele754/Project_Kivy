@@ -1,0 +1,8 @@
+#: import XCamera kivy.garden.xcamera.XCamera
+
+BoxLayout:
+    orientation: "vertical"
+    XCamera:
+        id:xcamera
+    Button:
+        text:"Change camera"
