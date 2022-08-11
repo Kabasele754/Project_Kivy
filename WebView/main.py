@@ -1,3 +1,7 @@
+import os
+
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
+
 from kivy.uix.widget import Widget
 from kivymd.app import MDApp
 from webview import WebView
