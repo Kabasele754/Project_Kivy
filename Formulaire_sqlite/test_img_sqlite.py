@@ -29,5 +29,5 @@ def insertBLOB(nom, image):
             sqliteConnection.close()
             print("the sqlite connection is closed")
 
-insertBLOB("Achille", "images/enfant1.jpg")
-insertBLOB("Charles", "images/enfant2.jpg")
+insertBLOB("Achille", "Formulaire_sqlite\images\enfant1.jpg")
+insertBLOB("Charles", "Formulaire_sqlite\images\enfant2.jpg")
