@@ -11,8 +11,7 @@ def insertBLOB(nom, image):
         sqliteConnection = sqlite3.connect('formulaire_etudiant.db')
         cursor = sqliteConnection.cursor()
         print("Connected to SQLite")
-        sqlite_insert_blob_query = """ INSERT INTO etudiant
-                                  (nom, image) VALUES (?, ?,)"""
+        sqlite_insert_blob_query = """ INSERT INTO etudiant (nom, image) VALUES (?, ?)"""
 
         empImage = convertToBinaryData(image)
         # Convert data into tuple format
