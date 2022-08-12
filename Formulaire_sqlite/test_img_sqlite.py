@@ -8,7 +8,7 @@ def convertToBinaryData(filename):
 
 def insertBLOB(empId, name, photo, resumeFile):
     try:
-        sqliteConnection = sqlite3.connect('SQLite_Python.db')
+        sqliteConnection = sqlite3.connect('formulaire_etudiant.db')
         cursor = sqliteConnection.cursor()
         print("Connected to SQLite")
         sqlite_insert_blob_query = """ INSERT INTO new_employee
