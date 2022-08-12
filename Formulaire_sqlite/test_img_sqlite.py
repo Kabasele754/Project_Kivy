@@ -6,18 +6,17 @@ def convertToBinaryData(filename):
         blobData = file.read()
     return blobData
 
-def insertBLOB(empId, name, photo, resumeFile):
+def insertBLOB(nom, image):
     try:
         sqliteConnection = sqlite3.connect('formulaire_etudiant.db')
         cursor = sqliteConnection.cursor()
         print("Connected to SQLite")
-        sqlite_insert_blob_query = """ INSERT INTO new_employee
-                                  (id, name, photo, resume) VALUES (?, ?, ?, ?)"""
+        sqlite_insert_blob_query = """ INSERT INTO etudiant
+                                  (nom, image) VALUES (?, ?,)"""
 
-        empPhoto = convertToBinaryData(photo)
-        resume = convertToBinaryData(resumeFile)
+        empImage = convertToBinaryData(image)
         # Convert data into tuple format
-        data_tuple = (empId, name, empPhoto, resume)
+        data_tuple = (nom, empImage)
         cursor.execute(sqlite_insert_blob_query, data_tuple)
         sqliteConnection.commit()
         print("Image and file inserted successfully as a BLOB into a table")
@@ -30,5 +29,5 @@ def insertBLOB(empId, name, photo, resumeFile):
             sqliteConnection.close()
             print("the sqlite connection is closed")
 
-insertBLOB(1, "Achille", "E:\pynative\Python\photos\smith.jpg", "E:\pynative\Python\photos\smith_resume.txt")
-insertBLOB(2, "Charles", "E:\pynative\Python\photos\david.jpg", "E:\pynative\Python\photos\david_resume.txt")
+insertBLOB("Achille", "images/enfant1.jpg")
+insertBLOB("Charles", "images/enfant2.jpg")
