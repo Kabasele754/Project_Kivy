@@ -3,7 +3,8 @@ import os
 os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
- 
+from kivy.lang.builder import Builder
+Builder.load_file("file_choose.kv")
  
  
 class MyWidget(GridLayout):
