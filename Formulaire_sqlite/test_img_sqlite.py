@@ -8,7 +8,7 @@ def convertToBinaryData(filename):
 
 def insertBLOB(nom, image):
     try:
-        sqliteConnection = sqlite3.connect('formulaire_etudiant.db')
+        sqliteConnection = sqlite3.connect('Formulaire_sqlite/formulaire_etudiant.db')
         cursor = sqliteConnection.cursor()
         print("Connected to SQLite")
         sqlite_insert_blob_query = """ INSERT INTO etudiant (nom, image) VALUES (?, ?)"""
@@ -28,5 +28,5 @@ def insertBLOB(nom, image):
             sqliteConnection.close()
             print("the sqlite connection is closed")
 
-insertBLOB("Achille", "Formulaire_sqlite\images\enfant1.jpg")
-insertBLOB("Charles", "Formulaire_sqlite\images\enfant2.jpg")
+insertBLOB("Achille", "Formulaire_sqlite/images/enfant1.jpg")
+insertBLOB("Charles", "Formulaire_sqlite/images/enfant2.jpg")
