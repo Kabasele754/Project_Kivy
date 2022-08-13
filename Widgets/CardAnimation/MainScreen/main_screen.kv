@@ -3,7 +3,7 @@
 
     MDBoxLayout:
         orientation: "vertical"
-        padding: "12dp", "56dp", "12dp", "12dp"
+        padding: "12dp", "36dp", "12dp", "12dp"
         spacing: "24dp"
 
         MDLabel:
@@ -18,6 +18,36 @@
                 id: card_list
                 padding: "24dp"
                 spacing: "24dp"
+                MDCard:
+                    orientation: "vertical"
+                    size_hint: 1, None
+                    height: "300dp"
+                    elevation: 20
+                    radius: 24
+                    padding: 15
+
+                    FitImage:
+                        source: "https://picsum.photos/id/1015/512/512"
+                        size_hint: 1, None
+                        height: root.height / 5.5
+                        size: 300,200
+                        radius: [10, 10, 10, 10]
+                    MDSeparator:
+                        height: "2dp"
+                    MDLabel:
+                        text: "Lorem ipsum"
+                        bold: True
+                        adaptive_height: True
+                        padding: 12, 12
+                        font_style: "H5"              
+
+                    MDLabel:
+                        padding: 12, 12
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " \
+                            "do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+
                 
                 
 
