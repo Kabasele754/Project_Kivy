@@ -5,18 +5,15 @@ from kivy.lang.builder import Builder
 Builder.load_file("MainScreen/main_screen.kv")
 
 from kivy.properties import StringProperty
-
 from kivymd.uix.behaviors import FakeRectangularElevationBehavior
 from kivymd.uix.card import MDCard
-from kivy.lang.builder import Builder
-Builder.load_file("MainScreen/components/card/card.kv")
 
 
 class ElevationCard(MDCard, FakeRectangularElevationBehavior):
     pass
 
 
-class HeroCard(ElevationCard):
+class MYCard(MDCard, FakeRectangularElevationBehavior):
     source = StringProperty()
     tag = StringProperty()
 
@@ -38,7 +35,7 @@ class MainScreenView(ThemableBehavior, MDScreen):
         if not self.ids.hero_list.children:
             for i, source in enumerate(self.image_list):
                 self.ids.hero_list.add_widget(
-                    HeroCard(
+                    MYCard(
                         source=source,
                         tag=f"Tag {i}",
                         on_release=self.controller.on_tap_card,
