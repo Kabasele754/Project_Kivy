@@ -1,6 +1,9 @@
 from MainScreen.components import HeroCard
 from kivymd.theming import ThemableBehavior
 from kivymd.uix.screen import MDScreen
+from kivy.lang.builder import Builder
+
+Builder.load_file("MainScreen/main_screen.kv")
 
 
 class MainScreenView(ThemableBehavior, MDScreen):
