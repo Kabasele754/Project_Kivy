@@ -14,22 +14,25 @@
             padding_x: "24dp"
 
         ScrollView:  
-            HeroCard
+            MDCard:
                 orientation: "vertical"
                 size_hint: 1, None
-                height: "340dp"
-                elevation: 8
+                height: "400dp"
+                elevation: 20
                 radius: 24
                 padding: 12
 
-            
+                MDBoxLayout:
+                    id: hero_from
+                    #tag: root.tag
+                    size_hint: 1, None
+                    height: root.height / 1.3
 
-                FitImage:
-                    source: root.source
-                    size_hint: None, None
-                    size: hero_from.size
-                    radius: 24
-
+                    FitImage:
+                        source: "https://picsum.photos/seed/picsum/200/300"
+                        size_hint: None, None
+                        size: hero_from.size
+                        #radius: 24
                 MDLabel:
                     text: "Lorem ipsum"
                     bold: True
@@ -42,3 +45,5 @@
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " \
                         "do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+            
