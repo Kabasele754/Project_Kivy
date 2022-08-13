@@ -1,8 +1,9 @@
-from View.MainScreen.components import HeroCard
-from View.base_screen import BaseScreenView
+from MainScreen.components import HeroCard
+from kivymd.theming import ThemableBehavior
+from kivymd.uix.screen import MDScreen
 
 
-class MainScreenView(BaseScreenView):
+class MainScreenView(ThemableBehavior, MDScreen):
     image_list = [
         "https://picsum.photos/id/10/512/512",
         "https://picsum.photos/id/100/512/512",
