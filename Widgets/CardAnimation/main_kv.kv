@@ -2,4 +2,31 @@
 #:import card MainScreen.components.card
 
 
-MainScreenView:
+#MainScreenView:
+
+MDScreen:
+    
+    MDCard:
+        size_hint: (.8,.5)
+        pos_hint: {"center_x":.5, "center_y": .70}
+        elevation: 40
+
+        MDBoxLayout:
+            orientation: "vertical"
+            padding: "10dp"
+            FitImage:
+                source: "https://picsum.photos/200/300"
+                size_hint: (1,1)
+            MDLabel:
+                text: "Lorem ipsum"
+                bold: True
+                size_hint:(1, .15)
+                adaptive_height: True
+                padding: 12, 12
+                font_style: "H5"
+            MDLabel:
+                padding: 12, 12
+                text:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " \
+                    "do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+    
