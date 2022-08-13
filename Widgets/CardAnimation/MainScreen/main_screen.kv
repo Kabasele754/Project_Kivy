@@ -18,11 +18,44 @@
                 id: card_list
                 padding: "24dp"
                 spacing: "24dp"
+
+                MDCard:
+                    orientation: "vertical"
+                    size_hint: 1, None
+                    height: "200dp"
+                    elevation: 20
+                    radius: 24
+                    padding: 15
+
+                    MDTextField:
+                        id: phone
+                        #pos_hint: {"center_x": .5, "center_y": .65}
+                        icon_left: "magnify"
+                        hint_text: "Phone"
+                        mode: "rectangle"
+                        normal_color: (100, 100, 50, .5)
+                        color_active: (255, 255, 255, 0)
+                        height: root.height / 2.8
+                    MDTextField:
+                        id: phone
+                        #pos_hint: {"center_x": .5, "center_y": .45}
+                        icon_left: "magnify"
+                        hint_text: "Phone"
+                        mode: "rectangle"
+                        normal_color: (100, 100, 50, .5)
+                        color_active: (255, 255, 255, 0)
+                    MDRaisedButton:
+                        text: "Enregister"
+                        pos_hint: {"center_x": .5, "center_y": .10}
+                        md_bg_color: 0, 0, 1, 1
+                        on_press: app.submit()
+
+
                 
                 
 
 
-                
+               
                 
 <MYCoolCard>: # Second card esseye  
     orientation: "vertical"
