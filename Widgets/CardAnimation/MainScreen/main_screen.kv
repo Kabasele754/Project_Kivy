@@ -13,13 +13,21 @@
             adaptive_height: True
             padding_x: "24dp"
 
-        ScrollView:
+        ScrollView:  
+            HeroCard
+                orientation: "vertical"
+                size_hint: 1, None
+                height: "340dp"
+                elevation: 8
+                radius: 24
+                padding: 12
 
-            MDCard:
+            
+
                 FitImage:
-                    source: ""
+                    source: root.source
                     size_hint: None, None
-                    #size: hero_from.size
+                    size: hero_from.size
                     radius: 24
 
                 MDLabel:
@@ -34,33 +42,3 @@
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " \
                         "do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-
-<HeroCard>
-    orientation: "vertical"
-    size_hint: 1, None
-    height: "340dp"
-    elevation: 8
-    radius: 24
-    padding: 12
-
-   
-
-    FitImage:
-        source: root.source
-        size_hint: None, None
-        size: hero_from.size
-        radius: 24
-
-    MDLabel:
-        text: "Lorem ipsum"
-        bold: True
-        adaptive_height: True
-        padding: 12, 12
-        font_style: "H5"
-
-    MDLabel:
-        padding: 12, 12
-        text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " \
-            "do eiusmod tempor incididunt ut labore et dolore magna aliqua."
