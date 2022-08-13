@@ -15,9 +15,11 @@
 
         ScrollView:
             MDList:
-                id: hero_list
+                id: card_list
                 padding: "24dp"
-                spacing: "24dp" 
+                spacing: "24dp"
+                
+                
 
 
 <MYCard>:
@@ -35,7 +37,7 @@
         height: root.height / 2.9
 
         FitImage:
-            source: root.source
+            source: "https://picsum.photos/id/1015/512/512"
             size_hint: None, None
             size: hero_from.size
             radius: [10, 10, 10, 10]

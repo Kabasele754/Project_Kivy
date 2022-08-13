@@ -7,6 +7,7 @@ Builder.load_file("MainScreen/main_screen.kv")
 from kivy.properties import StringProperty
 from kivymd.uix.behaviors import FakeRectangularElevationBehavior
 from kivymd.uix.card import MDCard
+from kivymd.uix.list import OneLineListItem
 
 
 class ElevationCard(MDCard, FakeRectangularElevationBehavior):
@@ -31,13 +32,11 @@ class MainScreenView(ThemableBehavior, MDScreen):
         "https://picsum.photos/id/1021/512/512",
     ]
 
-    def on_enter(self, *args):
-        if not self.ids.hero_list.children:
-            for i, source in enumerate(self.image_list):
-                self.ids.hero_list.add_widget(
-                    MYCard(
-                        source=source,
-                        tag=f"Tag {i}",
-                        on_release=self.controller.on_tap_card,
-                    )
+    def on_star(self, *args):
+        for i in range(20):
+             self.root.ids.card_list.add_widget(
+                   OneLineListItem(text=f"Single-line item {i}")
                 )
+            
+               
+       
