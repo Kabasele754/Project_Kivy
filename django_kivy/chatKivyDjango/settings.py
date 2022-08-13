@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # add rest django
     'rest_framework',
-    # add chat app
+    # add app chat
     'chatApp',
 ]
 

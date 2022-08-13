@@ -1,0 +1,41 @@
+<SecondScreenView>
+    md_bg_color: app.theme_cls.bg_light
+    hero_to: hero_to
+
+    MDTopAppBar:
+        id: toolbar
+        pos_hint: {"top": 1}
+        md_bg_color: "white"
+        title: "Second Screen"
+        specific_text_color: 0, 0, 0, 1
+        left_action_items:
+            [["chevron-left", lambda x: root.controller.on_tap_chevron_back()]]
+
+    MDBoxLayout:
+        orientation: "vertical"
+        y: "-56dp"
+        spacing: "12dp"
+        padding: "12dp"
+
+        MDHeroTo:
+            id: hero_to
+            size_hint_y: None
+            height: "280dp"
+
+        ScrollView:
+
+            MDLabel:
+                adaptive_height: True
+                padding_y: "12dp"
+                theme_text_color: "Custom"
+                text_color: "grey"
+                text:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing " \
+                    "elit, sed do eiusmod tempor incididunt ut labore et " \
+                    "dolore magna aliqua. Ut enim ad minim veniam, quis " \
+                    "nostrud exercitation ullamco laboris nisi ut aliquip " \
+                    "ex ea commodo consequat. Duis aute irure dolor in " \
+                    "reprehenderit in voluptate velit esse cillum dolore eu " \
+                    "fugiat nulla pariatur. Excepteur sint occaecat " \
+                    "cupidatat non proident, sunt in culpa qui officia " \
+                    "deserunt mollit anim id est laborum."

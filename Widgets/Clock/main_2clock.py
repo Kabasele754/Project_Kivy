@@ -174,7 +174,7 @@ class Main(MDApp):
             if b in str(x):
                 a.data.append(
                 {
-                    "viewclass": "H",
+                    "viewclass": "JBSIDIS",
                     "markup": True,
                     "text": "[b][size=33]jbsidis: [/b][/size]"+str(x)
                 }

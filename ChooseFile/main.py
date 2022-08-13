@@ -14,7 +14,6 @@ class MyWidget(GridLayout):
         try:
             self.ids.image.source = filename[0]
  
- 
         except:
             pass
  
@@ -24,7 +23,6 @@ class FileChooserWindow(App):
     def build(self):
  
         return MyWidget()
- 
  
  
  
