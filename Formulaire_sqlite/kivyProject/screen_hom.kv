@@ -1,0 +1,18 @@
+#:kivy 1.10.0
+#:include screen_second.kv
+<Manager>:
+    id: screen_manager
+    screen_one: screen_one_id # original name: our set name
+    screen_two: screen_two_id
+    ScreenOne:
+        id: screen_one_id # our set name
+        name: 'screen1'
+        manager: screen_manager # telling each screen who its manager is.
+    ScreenTwo:
+        id: screen_two_id # our set name
+        name: 'screen2'
+        manager: screen_manager
+<ScreenOne>:
+    Button:
+        text: "On Screen 1 >> Go to Screen 2"
+        on_press: root.manager.current = 'screen2'
