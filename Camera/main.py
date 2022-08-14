@@ -10,17 +10,19 @@ in the source directory.
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.camera import Camera
+from kivy.lang.builder import Builder
 
 
 
 class CameraApp(App):
     def build(self):
-        self.camera_obj = Camera()
-        self.camera_obj.resolution = (800,800)
-        self.camera_obj.play = True
-        layout = BoxLayout()
-        layout.add_widget(self.camera_obj)
-        return layout
+        # self.camera_obj = Camera()
+        # self.camera_obj.resolution = (800,800)
+        # self.camera_obj.play = True
+        # layout = BoxLayout()
+        # layout.add_widget(self.camera_obj)
+       
+        return Builder.load_file("Camera/main.kv")
 
 
 if __name__ == '__main__':
