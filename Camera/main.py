@@ -23,6 +23,20 @@ class CameraApp(App):
         # layout.add_widget(self.camera_obj)
        
         return Builder.load_file("Camera/main.kv")
+    
+    def picture_taken(self):
+        print("Cat the picture")
+        
+    def change_cam(self, instance):
+        camera = instance.parent.ids.xcamera
+        if camera.index == 0:
+            camera.index = int(camera.index)+ 1
+        elif camera.index == 1:
+            camera.index = int(camera.index)- 1
+        else:
+            camera.index = camera.index 
+        
+        
 
 
 if __name__ == '__main__':
