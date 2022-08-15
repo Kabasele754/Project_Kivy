@@ -6,9 +6,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.lang.builder import Builder
 Builder.load_file("file_choose.kv")
  
- 
 class MyWidget(GridLayout):
- 
  
     def selected(self, filename):
         try:
@@ -18,12 +16,10 @@ class MyWidget(GridLayout):
             pass
  
  
- 
 class FileChooserWindow(App):
     def build(self):
  
         return MyWidget()
- 
  
  
 if __name__ == "__main__":
