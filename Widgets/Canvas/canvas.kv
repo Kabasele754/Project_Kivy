@@ -6,9 +6,11 @@ BoxLayout:
         Rectangle:
             pos: self.pos
             size: self.size
-    Widget:
+    Label:
         size_hint_x: None
-        width: left_box.width - right_box.width        
+        width: left_box.width - right_box.width 
+        text: "Hello Canvas"
+        font_size: dp(40)       
     BoxLayout:
         width: 200
         id: right_box
