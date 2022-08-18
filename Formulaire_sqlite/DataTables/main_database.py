@@ -6,7 +6,7 @@ from kivymd.uix.datatables import MDDataTable
 from kivy.lang import Builder
 from kivy.metrics import dp
 
-from model.database_etu import Database
+from DataTables import Database
 
 db = Database('database_student.db')
 
