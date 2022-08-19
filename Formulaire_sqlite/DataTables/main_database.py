@@ -3,6 +3,7 @@ os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 from kivymd.app import MDApp
 from kivymd.uix.screen import Screen
 from kivymd.uix.datatables import MDDataTable
+from kivymd.uix.boxlayout import MDBoxLayout
 from kivy.lang import Builder
 from kivy.metrics import dp
 
@@ -10,7 +11,7 @@ from database_etu import Database
 
 db = Database('database_student.db')
 
-class DataTableBox(BoxLayout):
+class DataTableBox(MDBoxLayout):
     def __init__(self, **kwargs):
         super(DataTableBox, self).__init__(**kwargs)
         self.data_tables = MDDataTable(
@@ -28,12 +29,6 @@ class DataTableBox(BoxLayout):
         self.data_tables.row_data = self.get_all_data()
         self.data_tables.bind(on_row_press=self.row_selected)
         self.add_widget(self.data_tables)
-class RecordsApp(MDApp):
-    def build(self):
-        screen = Builder.load_file('database.kv')
-    
-        return screen
-
     def get_all_data(self):
         data = []
         for row in db.fetch_all():
@@ -98,7 +93,17 @@ class RecordsApp(MDApp):
             db.delete(id)
             self.data_tables.row_data = self.get_all_data()
             self.clear_form()
+            
+            
+            
+class StudentFormApp(MDApp):
+    def build(self):
+        screen = Builder.load_file('database.kv')
+    
+        return screen
+
+    
 
 
 if __name__ == '__main__':
-    RecordsApp().run()
+    StudentFormApp().run()
