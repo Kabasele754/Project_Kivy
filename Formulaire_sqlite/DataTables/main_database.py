@@ -13,7 +13,7 @@ db = Database('database_student.db')
 
 class RecordsApp(MDApp):
     def build(self):
-        screen = Builder.load_file('libs/uix/kv/database.kv')
+        screen = Builder.load_file('database.kv')
         self.data_tables = MDDataTable(
             column_data=[
                 ("Id", dp(15)),
