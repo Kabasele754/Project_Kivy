@@ -24,7 +24,7 @@ class DataTableBox(MDBoxLayout):
             ],
             use_pagination=True,
             rows_num=5,
-            pos_hint= {'center_x':.5, 'center_y':.70}
+            pos_hint= {'center_x':.5, 'center_y':.90}
         )
         self.data_tables.row_data = self.get_all_data()
         self.data_tables.bind(on_row_press=self.row_selected)
