@@ -10,10 +10,9 @@ from database_etu import Database
 
 db = Database('database_student.db')
 
-
-class RecordsApp(MDApp):
-    def build(self):
-        screen = Builder.load_file('database.kv')
+class DataTableBox(BoxLayout):
+    def __init__(self, **kwargs):
+        super(DataTableBox, self).__init__(**kwargs)
         self.data_tables = MDDataTable(
             column_data=[
                 ("Id", dp(15)),
@@ -28,7 +27,11 @@ class RecordsApp(MDApp):
         )
         self.data_tables.row_data = self.get_all_data()
         self.data_tables.bind(on_row_press=self.row_selected)
-        screen.ids.main_layout.add_widget(self.data_tables)
+        self.add_widget(self.data_tables)
+class RecordsApp(MDApp):
+    def build(self):
+        screen = Builder.load_file('database.kv')
+    
         return screen
 
     def get_all_data(self):
