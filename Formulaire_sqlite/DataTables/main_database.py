@@ -60,7 +60,7 @@ class DataTableBox(MDBoxLayout):
         self.root.ids.firstname.text = row_data[3]
         self.root.ids.age.text = row_data[4]
 
-    def add_record(self):
+    def add_record(self):# to save data
         self.root.ids.student_id.text = ''
         if self.root.ids.name.text == '' or self.root.ids.lastname.text == '' or self.root.ids.firstname.text == '' or self.root.ids.age.text == '':
             self.root.ids.student_id.text = 'Veuillez remplir tous les champs'
