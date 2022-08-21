@@ -1,6 +1,7 @@
 import os
 os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
 from kivy.app import App
+from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.clock import Clock
 
@@ -21,7 +22,7 @@ KXAnalogClock:
             circle: 0, 0, min(self.size) * 0.49
 '''
 
-class SampleApp(App):
+class SampleApp(MDApp):
     def build(self):
         return Builder.load_string(KV_CODE)
 
