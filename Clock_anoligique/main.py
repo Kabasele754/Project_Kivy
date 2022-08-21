@@ -22,7 +22,7 @@ KXAnalogClock:
             circle: 0, 0, min(self.size) * 0.49
 '''
 
-class SampleApp(MDApp):
+class SampleApp(App):
     def build(self):
         return Builder.load_string(KV_CODE)
 
