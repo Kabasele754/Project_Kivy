@@ -4,24 +4,34 @@ from django.contrib.auth.models import User
 from .models import *
 
 
+class UserSerializer(serializers.ModelSerializer):
+    snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Profile.objects.all())
+
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'profile']
+
+
 class MainRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('username', 'email', 'password')
 
 class ProfilSerializer(serializers.HyperlinkedModelSerializer):
-    register = MainRegisterSerializer()
+    user = MainRegisterSerializer()
     
     class Meta:
         model = Profile
-        fields = ('register' ,'name','pic') 
+        fields = ('user' ,'name','pic') 
         
     def create(self, validated_data):
         user = User.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'], validated_data['file'])
         return user
+
+
         
 class FriendSerializer(serializers.HyperlinkedModelSerializer):
-    prof = ProfilSerializer()
+    profile = ProfilSerializer()
     class Meta:
         model = Friend
         fields = '__all__'
