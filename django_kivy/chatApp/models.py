@@ -17,7 +17,6 @@ class Profile(models.Model):
     
 class Friend(models.Model):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    name= models.CharField(max_length=100)
 
     def __str__(self):
         return "Je m'appelle ",self.profile
