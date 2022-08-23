@@ -1,7 +1,7 @@
 
 # Django REST Framework avec Kivy et kivy
 
-![Alt text](django_kivy\django-rest-framework-drf.png?raw=true "Django Rest Framework")
+![Alt text](django-rest-framework-drf.png?raw=true "Django Rest Framework")
 
 
 ## Qu'est-ce que Django ?
