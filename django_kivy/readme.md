@@ -30,7 +30,7 @@ Dans une API RESTful, les points de terminaison définissent la structure et l'u
 
 Pour montrer comment créer une application RESTful avec le framework Django REST, nous allons créer un exemple d'API de Chat Message. Nous utiliserons deux points de terminaison avec leurs méthodes HTTP respectives, comme indiqué dans le tableau ci-dessous :
 
-| Point final | [![](https://img.shields.io/badge/GET-blue?style=for-the-badge)]() | <span color="red">POST</span> | `PUT` | `DELETE` |
+| Point final | [![](https://img.shields.io/badge/GET-blue?style=for-the-badge)]() |[![](https://img.shields.io/badge/POST-yellow?style=for-the-badge)]() | [![](https://img.shields.io/badge/PUT-orange?style=for-the-badge)]() | [![](https://img.shields.io/badge/DELETE-blueviolet?style=for-the-badge)]() |
 | ----------- | ----|------|-----|--------|
 | http://127.0.0.1:8000/api/ |1. Lister tout : répertorier toutes les Chats pour l'utilisateur demandé |2. Créer : ajouter une nouvelle Chat |Pas / Ajout|Pas / Ajout|
 | http://127.0.0.1:8000/api//api/chat/<int:chat_id> | 3. Récupérer : obtenir un message chat à faire avec une donnée chat_id |Pas / Ajout|4. Mettre à jour : mettre à jour une tâche avec une donnée chat_id|5. Supprimer : Supprimer une tâche avec une donnée chat_id|
