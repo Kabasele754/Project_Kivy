@@ -12,10 +12,17 @@ class ProfiletViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfilSerializer
     
-    # def all_friend(request):
-    #     friend = Friend.objects.all()
-    #     serializer = ChatSerializer(friend, many=True)
-    #     return Response(serializer.data, status=status.HTTP_200_OK)
+    # def post(self, request, *args, **kwargs):
+    #     serializer = self.get_serializer(data=request.data)
+    #     serializer.is_valid(raise_exception=True)
+    #     user = serializer.save()
+    #     token = AuthToken.objects.create(user)
+    #     return Response({
+    #         "users": UserSerializer(user, context=self.get_serializer_context()).data,
+    #         "token": token[1]
+    #     })
+    
+  
 
 #@api_view(['POST'])
 class FriendViewSet(viewsets.ModelViewSet):
