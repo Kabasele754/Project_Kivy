@@ -1,7 +1,7 @@
 
 # Django REST Framework avec Kivy et kivy
 
-<img src="pythonlogo.png" width="150" height="100"><img src="django.png" width="150" height="100"><img src="djangorestframework.png" width="150" height="100"><img src="kivy.png" width="150" height="100"><img src="logo-kivymd.png" width="150" height="000">
+<img src="pythonlogo.png" width="150" height="100">  <img src="django.png" width="150" height="100"><img src="djangorestframework.png" width="150" height="100">  <img src="kivy.png" width="150" height="100">  <img src="logo-kivymd.png" width="150" height="000">
 
 ## Qu'est-ce que Django ?
 
