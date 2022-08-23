@@ -2,6 +2,7 @@
 # Django REST Framework avec Kivy et kivy
 
 ![Alt text](django.png?raw=true "Django Rest Framework" {width=50px height=50px })
+<img src="django.png" width="150" height="280">
 ![Alt text](pythonlogo.png?raw=true "Django Rest Framework"  {width=50px height=50px })
 ![Alt text](djangorestframework.png?raw=true "Django Rest Framework"  {width=50px height=50px })
 ![Alt text](kivy.png=?raw=true "Django Rest Framework"  {width=50px height=50px })
